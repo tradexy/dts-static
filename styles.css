@@ -1,0 +1,46 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.navbar {
+    font-family: 'Arial, sans-serif'; /* Ensures consistent font type */
+    font-size: 16px; /* Set a uniform font size */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000; /* Consistent link color */
+    margin-right: 15px; /* Consistent spacing between links */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff; /* Color for hover state */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 20px; /* Ensures the brand text stands out */
+}
+
+/* Ensure links maintain consistent padding */
+.nav-item {
+    padding: 5px;
+}
+
+/* Footer Styling */
+footer {
+    font-family: 'Arial, sans-serif'; /* Ensure footer uses consistent fonts */
+    font-size: 14px; /* Footer font size */
+    color: #666; /* Set a lighter color for the footer text */
+}
+
+footer a {
+    color: #007bff; /* Consistent footer link color */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Make footer links more noticeable on hover */
+}
