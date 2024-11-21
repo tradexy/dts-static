@@ -1,0 +1,25 @@
+<!-- src/templates/login.html -->
+
+{% extends "base.html" %}
+        
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Log In</h1>
+    <form method="POST" class="mb-4">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+</div>
+{% endblock %}

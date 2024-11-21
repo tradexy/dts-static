@@ -9,23 +9,36 @@
     <link rel="icon" href="static/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <!-- (Same as in index.html) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- ... (copy the navigation bar code from index.html) ... -->
+        <a class="navbar-brand" href="index.html">Digital Transport Service</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="privacy_policy.html">Privacy Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="terms_of_service.html">Terms of Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Main Content -->
     <div class="container mt-4">
         <h1>About Us</h1>
-        <p>Digital Transport Service (DTS) was founded with the mission to revolutionize the way businesses handle their delivery needs. By connecting companies with professional drivers, we aim to provide a seamless and efficient delivery experience.</p>
+        <p>Digital Transport Service (DTS) was founded to revolutionize the way businesses handle their delivery needs. By connecting companies with professional drivers, we aim to provide a seamless and efficient delivery experience.</p>
 
         <h2>Our Mission</h2>
         <p>To streamline the delivery process through innovative technology, ensuring timely and secure transportation of packages.</p>
@@ -35,13 +48,18 @@
     </div>
 
     <!-- Footer -->
-    <!-- (Same as in index.html) -->
     <footer class="bg-light text-center text-lg-start mt-5">
-        <!-- ... (copy the footer code from index.html) ... -->
+        <div class="container p-4">
+            <p>&copy; 2023 Digital Transport Service. All rights reserved.</p>
+            <p>
+                <a href="privacy_policy.html">Privacy Policy</a> |
+                <a href="terms_of_service.html">Terms of Service</a>
+            </p>
+        </div>
     </footer>
 
-    <!-- Scripts -->
-    <!-- (Same as in index.html) -->
-    <!-- ... -->
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
