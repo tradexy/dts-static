@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Services - Digital Transport Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <!-- Include navigation -->
-    <div class="container mt-4">
-        <h1>Our Services</h1>
-        <ul>
-            <li>Real-Time Package Tracking</li>
-            <li>Flexible Delivery Options</li>
-            <li>Secure Payment Processing</li>
-            <!-- Additional services -->
-        </ul>
-    </div>
+    <!-- Placeholder for Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
     <div class="container mt-4">
         <h1>Our Services</h1>
         <ul>
             <li><strong>Real-Time Package Tracking:</strong> Monitor all deliveries with real-time GPS tracking for complete transparency.</li>
             <li><strong>Flexible Delivery Options:</strong> Choose the best delivery solution that meets your timeline and budget.</li>
             <li><strong>Secure Payment Processing:</strong> All transactions are processed using Stripe, providing you with peace of mind.</li>
+            <li><strong>Driver Ratings:</strong> View and provide ratings for drivers to ensure high service standards.</li>
+            <li><strong>Seamless Communication:</strong> Message drivers directly through our platform for efficient coordination.</li>
         </ul>
-    </div>    
+    </div>
+
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header and Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load header
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+                });
+
+            // Load footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                });
+        });
+    </script>
 </body>
 </html>

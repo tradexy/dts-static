@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <title>Privacy Policy - Digital Transport Service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Same as in about.html -->
-    </nav>
+    <!-- Placeholder for Header -->
+    <div id="header-placeholder"></div>
 
     <!-- Main Content -->
     <div class="container mt-4">
@@ -39,13 +44,30 @@
         <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:john@jjmh.site">john@jjmh.site</a>.</p>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
-        <!-- Same as in about.html -->
-    </footer>
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header and Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load header
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+                });
+
+            // Load footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                });
+        });
+    </script>
 </body>
 </html>
