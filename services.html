@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Services - Digital Transport Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <iframe src="header-footer.html" frameborder="0" width="100%" height="100%"></iframe>
-    <div id="services-content" style="position: relative; top: -400px;">
-        <div class="container mt-4">
+    <!-- Placeholder for Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="intro-section text-center">
             <h1>Our Services</h1>
-            <ul>
+            <ul class="list-unstyled mt-4">
                 <li><strong>Real-Time Package Tracking:</strong> Monitor all deliveries with real-time GPS tracking for complete transparency.</li>
                 <li><strong>Flexible Delivery Options:</strong> Choose the best delivery solution that meets your timeline and budget.</li>
                 <li><strong>Secure Payment Processing:</strong> All transactions are processed using Stripe, providing you with peace of mind.</li>
@@ -18,5 +25,20 @@
             </ul>
         </div>
     </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+                });
+        });
+    </script>
 </body>
 </html>
