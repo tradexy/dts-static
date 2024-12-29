@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants - Digital Transport Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Find and explore restaurants in your area.">
+    <meta name="keywords" content="restaurants, explore, food delivery">
+    <style>
+        /* Custom styles for the simplified header */
+        #custom-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #custom-header a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #custom-header select,
+        #custom-header button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Header -->
+    <div id="custom-header">
+        <a href="index.html">Digital Transport Service</a>
+        <div>
+            <label for="restaurantSelect" class="sr-only">Choose the restaurant:</label>
+            <select id="restaurantSelect" class="form-control d-inline-block" style="width: auto;" required>
+                <option value="" disabled selected>Choose the restaurant:</option>
+                <option value="https://www.standard-tandoori.co.uk/">Standard Tandoori</option>
+                <option value="https://croxley-kebabhouse.co.uk/">Croxley Express BBQ</option>
+                <option value="https://www.farmhousepizza-rickmansworth.co.uk/">Farmhouse Pizza</option>
+                <option value="https://www.pizzahut.co.uk/">Pizza Now</option>
+                <option value="https://bombaykitchencroxley.co.uk/">Bombay Kitchen</option>
+            </select>
+            <button type="button" class="btn btn-primary ml-2" onclick="loadRestaurant()">Go</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-3">
+        <iframe id="restaurantFrame" src="" width="100%" height="800" style="border: none;"></iframe>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to Load the Selected Restaurant -->
+    <script>
+        function loadRestaurant() {
+            const select = document.getElementById("restaurantSelect");
+            const iframe = document.getElementById("restaurantFrame");
+            const selectedUrl = select.value;
+
+            if (selectedUrl) {
+                iframe.src = selectedUrl;
+            }
+        }
+    </script>
+</body>
+</html>
