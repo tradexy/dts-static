@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants Proxy - Digital Transport Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom header styles */
+        #custom-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #custom-header a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #custom-header select,
+        #custom-header button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Header -->
+    <div id="custom-header">
+        <a href="index.html">Digital Transport Service</a>
+        <div>
+            <label for="restaurantSelect" class="sr-only">Choose the restaurant:</label>
+            <select id="restaurantSelect" class="form-control d-inline-block" style="width: auto;" required>
+                <option value="" disabled selected>Choose the restaurant:</option>
+                <option value="https://www.farmhousepizza-rickmansworth.co.uk/">Farmhouse Pizza</option>
+            </select>
+            <button type="button" class="btn btn-primary ml-2" onclick="loadRestaurant()">Go</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-3">
+        <iframe id="restaurantFrame" src="" width="100%" height="800" style="border: none;"></iframe>
+    </div>
+
+    <!-- JavaScript to Load the Restaurant -->
+    <script>
+        function loadRestaurant() {
+            const select = document.getElementById("restaurantSelect");
+            const iframe = document.getElementById("restaurantFrame");
+            const selectedUrl = select.value;
+
+            if (selectedUrl) {
+                // Use the proxy to load the restaurant URL
+                iframe.src = `https://b64004af-e32d-482a-a2b3-682edf27a614-00-39dhg20orbklt.kirk.replit.dev/proxy?url=${encodeURIComponent(selectedUrl)}`;
+            }
+        }
+    </script>
+</body>
+</html>
